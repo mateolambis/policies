@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminación de Datos - BM Lanzador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #0a66c2;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #0a66c2;
+            margin-top: 25px;
+        }
+        .info-box {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-left: 4px solid #0a66c2;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        p {
+            color: #555;
+            text-align: justify;
+        }
+        ul {
+            color: #555;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .form-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        input, textarea, button {
+            font-family: Arial, sans-serif;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #0a66c2;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #084b9e;
+        }
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Solicitud de Eliminación de Datos</h1>
+
+        <div class="info-box">
+            <strong>ℹ️ Información importante:</strong> Esta página permite que los usuarios soliciten la eliminación de sus datos personales de acuerdo con las leyes de protección de datos (RGPD, CCPA, etc.).
+        </div>
+
+        <h2>¿Qué es la Eliminación de Datos?</h2>
+        <p>
+            El derecho al olvido o derecho a la eliminación de datos es un derecho fundamental que permite a los usuarios solicitar la eliminación de su información personal. Nos comprometemos a procesar y honrar estas solicitudes dentro de los plazos legales establecidos.
+        </p>
+
+        <h2>¿Qué Datos Podemos Eliminar?</h2>
+        <p>Podemos eliminar:</p>
+        <ul>
+            <li>Información de tu cuenta (nombre, email, datos de negocio)</li>
+            <li>Histórico de actividad y uso de la aplicación</li>
+            <li>Datos de configuración y preferencias</li>
+            <li>Información de anuncios asociada (excepto datos requeridos por ley)</li>
+        </ul>
+
+        <h2>Limitaciones Legales</h2>
+        <p>
+            Algunos datos no pueden ser eliminados si:
+        </p>
+        <ul>
+            <li>Son requeridos por leyes o regulaciones aplicables</li>
+            <li>Son necesarios para cumplir con obligaciones contractuales</li>
+            <li>Son requeridos por autoridades legales o fiscales</li>
+            <li>Son necesarios para prevenir fraude o abusos</li>
+        </ul>
+
+        <h2>Cómo Solicitar la Eliminación de Datos</h2>
+        <p>
+            Completa el formulario a continuación con tu información. Procesaremos tu solicitud dentro de 30 días hábiles:
+        </p>
+
+        <div class="form-section">
+            <form id="deletionForm">
+                <div>
+                    <label for="name"><strong>Nombre Completo:</strong></label>
+                    <input type="text" id="name" name="name" required placeholder="Tu nombre completo">
+                </div>
+
+                <div>
+                    <label for="email"><strong>Email:</strong></label>
+                    <input type="email" id="email" name="email" required placeholder="Tu correo electrónico">
+                </div>
+
+                <div>
+                    <label for="userId"><strong>ID de Usuario (si aplica):</strong></label>
+                    <input type="text" id="userId" name="userId" placeholder="Tu ID de usuario en BM Lanzador">
+                </div>
+
+                <div>
+                    <label for="reason"><strong>Motivo de la Solicitud:</strong></label>
+                    <textarea id="reason" name="reason" rows="4" placeholder="Explica por qué deseas eliminar tus datos" required></textarea>
+                </div>
+
+                <button type="submit">Enviar Solicitud de Eliminación</button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                ✓ Tu solicitud ha sido recibida exitosamente. Nos pondremos en contacto pronto para confirmar la eliminación de tus datos.
+            </div>
+        </div>
+
+        <h2>Proceso de Eliminación</h2>
+        <ol style="color: #555;">
+            <li><strong>Recepción:</strong> Recibiremos tu solicitud a través de este formulario</li>
+            <li><strong>Verificación:</strong> Verificaremos tu identidad para proteger tu seguridad</li>
+            <li><strong>Procesamiento:</strong> Procederemos con la eliminación dentro de 30 días hábiles</li>
+            <li><strong>Confirmación:</strong> Te enviaremos un email de confirmación cuando se complete</li>
+        </ol>
+
+        <h2>Preguntas Frecuentes</h2>
+        <p>
+            <strong>¿Cuánto tiempo tarda la eliminación?</strong><br>
+            Generalmente 30 días hábiles desde la recepción de la solicitud verificada.
+        </p>
+        <p>
+            <strong>¿Puedo recuperar mis datos después?</strong><br>
+            No, una vez eliminados los datos no pueden ser recuperados.
+        </p>
+        <p>
+            <strong>¿Qué pasa con los datos en copias de seguridad?</strong><br>
+            Los datos en copias de seguridad serán eliminados en el próximo ciclo de limpieza.
+        </p>
+
+        <h2>Contacto</h2>
+        <p>
+            Si tienes preguntas sobre el proceso de eliminación de datos, contáctanos a través de nuestro correo de soporte.
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('deletionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Aquí normalmente enviarías los datos a tu servidor
+            console.log('Solicitud de eliminación:', {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                userId: document.getElementById('userId').value,
+                reason: document.getElementById('reason').value,
+                timestamp: new Date().toISOString()
+            });
+            
+            // Mostrar mensaje de éxito
+            document.getElementById('successMessage').style.display = 'block';
+            document.getElementById('deletionForm').reset();
+            
+            // Ocultar el mensaje después de 5 segundos
+            setTimeout(function() {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
